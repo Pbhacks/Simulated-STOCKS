@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stock Market Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+   
+    
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">SU - Stocks and You
+                <span id="marketStatus" class="market-status">Loading...</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-item">Dashboard</a>
+                <a href="markets.htm" class="nav-item">Markets</a>
+                
+            </nav>
+        </header>
+
+        <div class="dashboard">
+            <div class="card">
+                <div class="card-title">NIFTY 50</div>
+                <div class="stock-price" id="niftyPrice">19,425.50</div>
+                <div class="stock-change positive" id="niftyChange">+125.30 (0.65%)</div>
+            </div>
+            <div class="card">
+                <div class="card-title">SENSEX</div>
+                <div class="stock-price" id="sensexPrice">64,112.65</div>
+                <div class="stock-change positive" id="sensexChange">+324.50 (0.51%)</div>
+            </div>
+            <div class="card">
+                <div class="card-title">BANK NIFTY</div>
+                <div class="stock-price" id="bankNiftyPrice">43,562.30</div>
+                <div class="stock-change negative" id="bankNiftyChange">-156.40 (-0.36%)</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="stockChart"></canvas>
+        </div>
+
+        <div class="top-gainers-losers">
+            <div class="gainers">
+                <h3 class="section-title">Top Gainers</h3>
+                <div id="topGainers" class="stock-list">
+                    <!-- Gainers will be populated here -->
+                </div>
+            </div>
+            <div class="losers">
+                <h3 class="section-title">Top Losers</h3>
+                <div id="topLosers" class="stock-list">
+                    <!-- Losers will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
