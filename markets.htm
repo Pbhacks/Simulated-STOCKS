@@ -113,9 +113,21 @@
             margin-top: 10px;
             opacity: 0.8;
         }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index:-100;
+          }
+  
     </style>
 </head>
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="11.mp4" type="video/mp4">
+      </video>
     <div class="container">
         <!-- Header with Navigation -->
         <header class="header">

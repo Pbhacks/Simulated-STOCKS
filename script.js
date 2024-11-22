@@ -255,4 +255,5 @@ function updateMarketStatus() {
     }
 }
 
+
 setInterval(updateMarketStatus, 1000);
